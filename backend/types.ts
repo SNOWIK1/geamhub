@@ -1,7 +1,22 @@
 export namespace AppTypes {
     
-    export type ProductType = "Channel" | "Chat"
-    export type ProductLang = "en" | "ru" | "other"
-    export type ProductContentType = "news" | "hobbies" | "science" | "education" | "scam" | "business" | null
+    export enum ProductType {
+        CHANNEL = "channel",
+        CHAT = "chat"
+    }
+    export enum ProductLang {
+        EN = "en",
+        RU = "ru",
+        OTHER = "other"
+    }
+    export enum ProductContentType {
+      NEWS = "news",
+      HOBBIES = "hobbies",
+      SCIENCE = "science",
+      EDUCATION = "education",
+      SCAM = "scam",
+      BUSINESS = "business",
+      NULL = "null"
+    }
     
 }

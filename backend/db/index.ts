@@ -6,6 +6,10 @@ const db = new Database(process.env.DB_PATH, {
 });
 
 db.pragma("journal_mode = WAL");
+
+db.prepare("DROP TABLE IF EXISTS products").run()
+db.prepare("DROP TABLE IF EXISTS users").run();
+
 db.prepare(`
 CREATE TABLE IF NOT EXISTS products (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,5 +24,17 @@ CREATE TABLE IF NOT EXISTS products (
     createdAt INTEGER NOT NULL
 );
 `).run()
+
+db.prepare(
+  `
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR(250) NOT NULL,
+    balance REAL NOT NULL
+);
+`
+).run();
 
 export default db;
