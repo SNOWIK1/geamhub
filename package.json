@@ -2,11 +2,9 @@
   "name": "gramhub",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "start": "tsc && node dist/backend/index.js",
+    "start:dev": "ts-node-dev backend/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +17,9 @@
     "dotenv": "^16.4.4",
     "ejs": "^3.1.9",
     "fastify": "^4.26.1",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
     "tsc": "^2.0.4",
     "typescript": "^5.3.3",
     "yarn": "^1.22.21"
