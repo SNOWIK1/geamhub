@@ -1,0 +1,57 @@
+body {
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    width: 20%;
+}
+
+main, aside {
+    height: 80%;
+}
+
+section {
+    width: 80%;
+}
+
+footer {
+    margin-bottom: 0px;
+    margin-top: 50px;
+    padding: 20px;
+    height: 10%;
+    text-align: center;
+    color: whitesmoke;
+    background-color: black;
+}
+
+.logo img {
+    height: 100px;
+    width:  100px;
+}
+
+.nav-links, .nav-icons {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-icons img {
+    width: 30px;
+    height: 30px;
+}
