@@ -4,8 +4,7 @@
   "description": "",
   "scripts": {
     "start": "tsc && node dist/backend/index.js",
-    "start:dev": "ts-node-dev backend/index.ts",
-    "tailwind": "npx tailwindcss -i ./frontend/styles/input.css -o ./frontend/styles/output.css --watch"
+    "start:dev": "ts-node-dev backend/index.ts"
   },
   "keywords": [],
   "author": "",
