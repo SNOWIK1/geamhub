@@ -4,12 +4,15 @@
   "description": "",
   "scripts": {
     "start": "tsc && node dist/backend/index.js",
-    "start:dev": "ts-node-dev backend/index.ts"
+    "start:dev": "ts-node-dev backend/index.ts",
+    "tailwind": "npx tailwindcss -i ./frontend/styles/input.css -o ./frontend/styles/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/static": "^7.0.1",
+    "@fastify/view": "^9.0.0",
     "@types/better-sqlite3": "^7.6.9",
     "@types/node": "^20.11.19",
     "axios": "^1.6.7",
