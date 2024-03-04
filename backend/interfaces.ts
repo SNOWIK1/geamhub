@@ -3,6 +3,7 @@ import { AppTypes } from "./types";
 export namespace AppInterfaces {
   export interface IProduct {
     id: BigInt;
+    name: string,
     isPrivate: number;
     isDiscussion: number;
     mainChannel: number | null;
