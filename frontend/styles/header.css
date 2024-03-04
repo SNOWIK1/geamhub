@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    bottom: 0;
+}
+
 header {
   position: fixed;
   background-color: rgb(22, 22, 22);
@@ -97,7 +102,7 @@ h3 {
 li:hover {
   animation-name: link-color;
   animation-fill-mode: forwards;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   cursor: pointer;
 }
 

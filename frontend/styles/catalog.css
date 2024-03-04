@@ -1,0 +1,100 @@
+html,
+body {
+  margin: 0;
+  bottom: 0;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(229, 229, 229);
+}
+
+h4 {
+  font-size: rem;
+}
+
+main {
+  margin-top: 15%;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+aside {
+  padding: 1%;
+  border-radius: 10px;
+  background-color: rgb(31, 31, 31);
+  height: 100%;
+  width: 25%;
+}
+
+section {
+  height: 100%;
+  width: 75%;
+}
+
+select {
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(133, 133, 133);
+  padding: 1%;
+  height: 30px;
+  margin: auto;
+  margin-right: 1%;
+}
+
+select:focus {
+  outline: none;
+}
+
+select:hover,
+option:hover {
+  cursor: pointer;
+  animation-name: grow;
+  animation-fill-mode: forwards;
+  animation-duration: 0.1s;
+}
+
+@keyframes grow {
+  to {
+    scale: 1.01;
+  }
+}
+
+.sortby-div,
+.sort-how {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sortby-div {
+  margin-bottom: 2%;
+}
+
+/* card styles */
+
+.product-card {
+  text-align: left;
+  border-radius: 10px;
+  background-color: rgb(57, 57, 57);
+  display: flex;
+  width: 90%;
+  height: 200px;
+  margin: auto;
+  padding: 2%;
+}
+
+.product-avatar {
+  margin-left: 2%;
+  height: 150px;
+  width: 150px;
+  border-radius: 1000px;
+  margin: auto;
+}
+
+.product-info {
+  padding: 2%;
+  justify-content: start;
+}
