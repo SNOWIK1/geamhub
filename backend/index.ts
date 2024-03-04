@@ -13,7 +13,7 @@ const PORT: number = parseInt(process.env.PORT ?? "3000")
 
 fastify.get("/", async (req: FastifyRequest, rep: FastifyReply) => {
     console.log(req.hostname)
-    return rep.view("/index.ejs", {})
+    return rep.view("/catalog.ejs", {})
 })
 
 fastify.listen({ port: PORT}, function (err, address) {
