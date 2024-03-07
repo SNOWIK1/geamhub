@@ -41,7 +41,7 @@ for (const ch of str) {
 // const RESPONSE_ARR = chunk(arr, 5)
 
 interface MyRequest extends FastifyRequest {
-  crit?: string,
+  criteria?: string,
   sortby?: string
 }
 
@@ -54,7 +54,7 @@ fastify.get("/catalog", async (req: FastifyRequest, rep: FastifyReply) => {
   console.log(req.hostname);
   const q = req.query as MyRequest;
   console.log(q);
-  if (q.crit && q.sortby) {
+  if (q.criteria && q.sortby) {
     if (q.sortby == "asc") return rep.view("/catalog.ejs", {
       products: arr.sort((a, b) => a.numberOfUsers - b.numberOfUsers),
     });

@@ -1,5 +1,5 @@
 const btnArr = document.getElementsByClassName("card-buy");
-localStorage.clear();
+
 for (const btn of btnArr) {
   btn.addEventListener("click", (e) => {
     let products = [];
@@ -9,8 +9,6 @@ for (const btn of btnArr) {
     console.log(products.length);
     products.push(getProductNameAndType(e));
     localStorage.setItem("products", JSON.stringify(products));
-
-    console.log(localStorage);
 
     fillCart();
   });
@@ -34,27 +32,24 @@ function getProductNameAndType(e) {
 
 function fillCart() {
   const cart = document.querySelector(".cart");
-  cart.innerHTML = ""
+  cart.innerHTML = "";
   const header = document.createElement("h4");
   header.innerHTML = "Cart";
   cart.appendChild(header);
-  
 
   const products = JSON.parse(localStorage.getItem("products"));
   if (products.length !== 0) {
     for (const product of products) {
+      const cartElemDiv = document.createElement("div");
+      cartElemDiv.className = "product-in-cart";
 
-      const cartElemDiv = document.createElement("div")
-      cartElemDiv.className = "product-in-cart"
+      const productImg = document.createElement("img");
+      productImg.src = product.imgLink;
+      productImg.alt = "product-img";
 
-      const productImg = document.createElement("img")
-      productImg.src = product.imgLink
-      productImg.alt = "product-img"
+      cartElemDiv.appendChild(productImg);
 
-
-      cartElemDiv.appendChild(productImg)
-
-      cart.appendChild(cartElemDiv)
+      cart.appendChild(cartElemDiv);
     }
   }
 }

@@ -16,6 +16,7 @@ header {
   color: rgb(229, 229, 229);
 }
 
+
 ul {
   position: absolute;
   right: 50%;
@@ -26,7 +27,9 @@ ul {
   gap: 10%;
 }
 
-h3 {
+a {
+  color: rgb(229, 229, 229);
+  text-decoration: none;
   font-size: 2rem;
   text-align: center;
 }
@@ -100,7 +103,7 @@ h3 {
   animation-duration: 0.2s;
 }
 
-li:hover {
+a:hover {
   animation-name: link-color;
   animation-fill-mode: forwards;
   animation-duration: 0.2s;
