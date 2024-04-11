@@ -8,7 +8,9 @@ export namespace AppInterfaces {
     isDiscussion: number;
     mainChannel: number | null;
     targetAudience: number;
+    price: number,
     lang: string;
+    imgLink: string,
     numberOfUsers: number;
     type: AppTypes.ProductType;
     contentType: AppTypes.ProductContentType;

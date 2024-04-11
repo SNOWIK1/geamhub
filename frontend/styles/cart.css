@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(22, 22, 22);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(229, 229, 229);
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 15%;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.product-in-cart {
+  background-color: rgb(56, 56, 56);
+  max-width: 60%;
+  margin: auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-in-cart-img {
+  padding: 1%;
+  margin-left: 2%;
+  height: 180px;
+  width: 180px;
+  border-radius: 1000px;
+  margin: auto;
+}
+
+.product-h4 {
+    font-size: 1.1rem;
+    margin-top: auto;
+    margin: auto;
+}
+
+.order-button {
+    position:fixed;
+    left: 42%;
+    bottom: 10%;
+    min-width: 250px;
+    min-height: 60px;
+    margin: auto;
+    font-size: 2rem;
+    background-color: rgb(11, 25, 92);
+    border-radius: 10px;
+}
+
+#buy-sign {
+    margin-top: auto;
+    margin: auto;
+    font-weight: 500;
+}

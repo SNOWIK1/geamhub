@@ -1,0 +1,66 @@
+.product-card {
+  position: relative;
+  text-align: left;
+  border-radius: 10px;
+  background-color: rgb(56, 56, 56);
+  display: flex;
+  width: 90%;
+  height: 250px;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 1.5%;
+}
+
+.product-avatar {
+  margin-left: 2%;
+  height: 180px;
+  width: 180px;
+  border-radius: 1000px;
+  margin: auto;
+}
+
+.product-info {
+  padding: 2%;
+  justify-content: start;
+}
+
+#product-name {
+  margin: 0;
+  text-align: left;
+}
+
+.product-desc {
+  width: 80%;
+  /* text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; */
+}
+
+.card-buy {
+  background-color: rgb(115, 115, 115);
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  border: none;
+  position: absolute;
+  right: 2%;
+  bottom: 5%;
+  width: 100px;
+  height: 50px;
+}
+
+.card-buy:hover {
+  cursor: pointer;
+  animation-name: card-buy-hover;
+  animation-fill-mode: forwards;
+  animation-duration: 0.2s;
+}
+
+@keyframes card-buy-hover {
+  to {
+    scale: 1.02;
+    background-color: rgb(22, 22, 22);
+    color: rgb(30, 92, 180);
+  }
+}

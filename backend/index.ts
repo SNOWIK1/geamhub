@@ -15,13 +15,15 @@ const PORT: number = parseInt(process.env.PORT ?? "3000");
 
 const TEST_OBJ = {
   id: BigInt("13124"),
-  name: "AVATARAKAN",
+  name: "AWESOME CHAT",
   isPrivate: 0,
   isDiscussion: 0,
   mainChannel: null,
   targetAudience: 0,
   lang: "ru",
+  price: 6699,
   numberOfUsers: 198,
+  imgLink: "https://images.unsplash.com/photo-1636743094110-5e153f93ad7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dGVsZWdyYW18ZW58MHx8MHx8fDA%3D",
   type: AppTypes.ProductType.CHAT,
   contentType: AppTypes.ProductContentType.NULL,
   createdAt: Date.now(),
@@ -33,7 +35,6 @@ const arr: AppInterfaces.IProduct[] = [];
 for (const ch of str) {
   const rand = parseInt(Math.random().toFixed(4).split(".").join(""));
 
-  // Создаем новый объект на каждой итерации, чтобы сохранить уникальные значения
   const newTestObj = { ...TEST_OBJ, numberOfUsers: rand };
   arr.push(newTestObj);
 }
@@ -50,10 +51,12 @@ fastify.get("/", async (req: FastifyRequest, rep: FastifyReply) => {
   return rep.view("/index.ejs", {});
 });
 
+fastify.get("/cart", async (_, rep: FastifyReply) => {
+  return rep.view("/cart.ejs")
+})
+
 fastify.get("/catalog", async (req: FastifyRequest, rep: FastifyReply) => {
-  console.log(req.hostname);
   const q = req.query as MyRequest;
-  console.log(q);
   if (q.criteria && q.sortby) {
     if (q.sortby == "asc") return rep.view("/catalog.ejs", {
       products: arr.sort((a, b) => a.numberOfUsers - b.numberOfUsers),

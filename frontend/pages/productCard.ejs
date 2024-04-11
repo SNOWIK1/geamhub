@@ -1,20 +1,19 @@
 <html>
+    <link rel="stylesheet" href="../styles/card.css">
 <div class="product-card">
     <img class="product-avatar"
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.jn4V28XLNT9nuwGV-lckBgHaEK%26pid%3DApi%26h%3D160&f=1&ipt=6f0f01eb5692086f1f45ba1c7c8eaf60c636144a5b8942ee6086078103b02e03&ipo=images"
+        src="<%- product.imgLink %>"
         alt="avatar">
     <div class="product-info">
         <div class="product-present">
             <h4 id="product-name"><%- product.name %></h4>
+            <p id="product-price">Цена: <%- product.price %></p>
             <p id="product-type">Тип: <%- product.type %></p>
             <p id="users-amount">Количество участников: <%- product.numberOfUsers %></p>
             <div class="product-desc">
                 <p id="product-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
                     distinctio deserunt
-                    architecto sit qui minus neque Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Nihil, eum animi. Inventore
-                    repr
-                    quo
+                    architecto sit qui. Inventore
                     assumenda officiis error! Repellat, ut!</p>
             </div>
         </div>
